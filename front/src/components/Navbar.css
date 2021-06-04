@@ -1,0 +1,98 @@
+.navbar {
+  width: 100%;
+  height: 110px;
+  background-color: black;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 1rem;
+  z-index: 50;
+}
+.navbar-logo h2 {
+  color: white;
+  font-size: 1.8rem;
+  cursor: pointer;
+}
+.navbar-links {
+  display: flex;
+  list-style: none;
+  align-items: center;
+}
+/* los li dentro del navbar */
+.navbar-links > li {
+  padding-left: 1.5rem;
+}
+/* los tag a(que son los links) dentro de los ul */
+.navbar-links > li > a {
+  text-decoration: none;
+  color: rgb(231, 147, 196);
+  font-size: 1.4rem;
+  display: flex;
+  align-items: center;
+}
+/* aca separamos el numero de items del carrito */
+.navbar-links > li > a > span {
+  display: flex;
+  align-items: center;
+  margin-left: 5px;
+}
+
+.cart-link {
+  background-color: #333;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.cart-link:hover {
+  background-color: rgb(5, 104, 107);
+  color: white;
+}
+/* aca tenemos el span con el numero de los productos */
+.cartlogo {
+  width: 30px;
+  height: 30px;
+  background-color: white;
+  border-radius: 50%;
+  margin-left: 8px;
+  color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.Hamburguer-menu {
+  width: 30px;
+  height: 30px;
+  /* para hacer las mediasquerys y que el menu sea responsive modificamos el display de flaex a none */
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+
+.Hamburguer-menu > div {
+  width: 100%;
+  height: 4px;
+  background-color: white;
+}
+
+.Hamburguer-menu:hover > div {
+  background-color: rgb(14, 107, 5);
+}
+/* 
+aca modificamos el ancho cuando el max sea menor a 960 los links se esconden y el menu hamburguer se hace flex y se muestra */
+@media (max-width: 960px) {
+  .navbar-links {
+    display: none;
+  }
+  .Hamburguer-menu {
+    display: flex;
+  }
+}
+
+@media (max-width: 560px) {
+  .navbar-logo h2 {
+    font-size: 1rem;
+  }
+}

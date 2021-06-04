@@ -1,0 +1,70 @@
+.sidebar {
+  width: 50%;
+  height: 100vh;
+  background-color: rgb(25, 101, 216);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 200;
+  transform: translateX(-100%);
+  transition: all 0.3s ease-out;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.sidebar.show {
+  transform: translateX(0);
+}
+.sidebar-links {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+}
+.sidebar-links > li {
+  display: flex;
+  align-items: center;
+}
+.sidebar-links > li > a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  flex: 1;
+  padding: 1rem;
+  text-decoration: none;
+  color: black;
+  font-size: 1.6rem;
+}
+.sidebar-links > li > a:hover {
+  background-color: black;
+  color: white;
+}
+.sidebar-links > li > a > span {
+  display: flex;
+  align-items: center;
+  margin-left: 10px;
+}
+.sidebar-cart {
+  width: 30px;
+  height: 30px;
+  background-color: black;
+  border-radius: 50%;
+  margin-left: 8px;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 1rem;
+}
+/* aca cambiamos el color a la clase del span que esta dentro de todo esto */
+.sidebar-links > li > a:hover .sidebar-cart {
+  background-color: white;
+  color: black;
+}
+
+@media (min-width: 960px) {
+  .sidebar {
+    display: none;
+  }
+}

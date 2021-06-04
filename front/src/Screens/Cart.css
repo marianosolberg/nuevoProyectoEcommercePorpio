@@ -1,0 +1,77 @@
+.cartt {
+  display: flex;
+  max-width: 1300px;
+  margin: 2rem auto;
+}
+.cartt-left h2 {
+  margin-bottom: 1rem;
+}
+.cartt-left {
+  flex: 0.7;
+  margin-right: 1rem;
+  margin-left: 1rem;
+  background-color: rgb(223, 230, 240);
+  padding: 1rem;
+}
+.cartt-right {
+  flex: 0.3;
+  background-color: rgb(249, 250, 253);
+  box-shadow: 0 1x 4px rgba(0, 0, 0, 0.4);
+  height: fit-content;
+  margin-right: 1rem;
+}
+.cartt-right div {
+  border-bottom: 1px solid black;
+  padding: 1rem;
+}
+.cartt-right div:last-child {
+  border: none;
+}
+.cartt-info p {
+  padding: 8px;
+  font-weight: bold;
+}
+.cartt-right div button {
+  padding: 10px 17px;
+  width: 100%;
+  background-color: black;
+  color: white;
+  border: 1px solid black;
+  cursor: pointer;
+}
+.cartt-right div button:hover {
+  opacity: 0.9;
+}
+@media (max-width: 1000px) {
+  .cartt {
+    max-width: 900px;
+  }
+}
+@media (max-width: 900px) {
+  .cartt {
+    max-width: 800px;
+  }
+}
+
+@media (max-width: 800px) {
+  .cartt {
+    max-width: 750px;
+  }
+}
+
+@media (max-width: 750px) {
+  .cartt {
+    flex-direction: column;
+    margin: 0 auto;
+  }
+
+  .cartt-right {
+    margin: 1rem;
+  }
+  .cartt-left {
+    margin: 0 auto;
+  }
+  .cartt-left h2 {
+    text-align: center;
+  }
+}

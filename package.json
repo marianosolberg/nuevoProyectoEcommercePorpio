@@ -1,0 +1,39 @@
+{
+  "name": "nuevoecommerce",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "start": "node back/server.js",
+    "server": "nodemon back/server.js",
+    "client": "npm start --prefix front",
+    "dev": "concurrently \"npm run server\" \"npm run client  \"",
+    "data:import": "node back/seed.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/marianosolberg/nuevoEcommerce-.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/marianosolberg/nuevoEcommerce-/issues"
+  },
+  "homepage": "https://github.com/marianosolberg/nuevoEcommerce-#readme",
+  "dependencies": {
+    "axios": "^0.21.1",
+    "cors": "^2.8.5",
+    "dotenv": "^9.0.2",
+    "express": "^4.17.1",
+    "mongoose": "^5.12.9",
+    "react-redux": "^7.2.4",
+    "redux": "^4.1.0",
+    "redux-devtools-extension": "^2.13.9",
+    "redux-thunk": "^2.3.0"
+  },
+  "devDependencies": {
+    "concurrently": "^6.1.0",
+    "nodemon": "^2.0.7"
+  }
+}
