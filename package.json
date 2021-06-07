@@ -4,10 +4,8 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "start": "concurrently \"npm run server\" \"npm run client  \"",
-    "server": "nodemon back/server.js",
-    "client": "npm start --prefix front",
-  
+    "start": "nodemon back/server.js",
+    "postinstall": "npm start --prefix front",
     "data:import": "node back/seed.js"
   },
   "repository": {
