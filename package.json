@@ -4,10 +4,10 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "start": "node back/server.js",
+    "start": "concurrently \"npm run server\" \"npm run client  \"",
     "server": "nodemon back/server.js",
     "client": "npm start --prefix front",
-    "dev": "concurrently \"npm run server\" \"npm run client  \"",
+  
     "data:import": "node back/seed.js"
   },
   "repository": {
