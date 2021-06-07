@@ -5,12 +5,10 @@
   "main": "server.js",
   "scripts": {
     "start": "node back/server.js",
-    "postinstall": "npm start --prefix front",
+    "server": "nodemon back/server.js",
+    "client": "npm start --prefix front",
+    "dev": "concurrently \"npm run server\" \"npm run client  \"",
     "data:import": "node back/seed.js"
-  },
-  "engines": {
-    "npm": "7.13.0",
-    "node": "14.15.5"
   },
   "repository": {
     "type": "git",
