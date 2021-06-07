@@ -4,7 +4,7 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "start": "nodemon back/server.js",
+    "start": "node back/server.js",
     "postinstall": "npm start --prefix front",
     "data:import": "node back/seed.js"
   },
